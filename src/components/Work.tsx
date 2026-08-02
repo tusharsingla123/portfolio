@@ -88,7 +88,7 @@ const Work = () => {
 
         // Filter and format the repositories
         const filtered: Project[] = data
-          .filter((repo: any) => !repo.fork && repo.name !== "tusharsingla123")
+          .filter((repo: any) => !repo.fork && repo.name !== "tusharsingla123" && repo.name !== "portfolio")
           .map((repo: any) => {
             const custom = CUSTOM_PROJECT_DETAILS[repo.name] || {};
 
