@@ -1,0 +1,151 @@
+.company-projects-section {
+  width: 100%;
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  padding: 120px 0;
+  box-sizing: border-box;
+}
+
+.company-projects-container {
+  width: var(--cWidth);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.company-projects-section h2 {
+  font-size: 70px;
+  font-weight: 500;
+  margin: 0;
+  text-align: left;
+  letter-spacing: -1px;
+}
+
+.company-projects-section h2 > span {
+  color: var(--accentColor);
+}
+
+.company-projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.company-project-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 45px;
+  gap: 50px;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.company-project-card:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--accentColor);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(0, 255, 213, 0.03);
+}
+
+.company-project-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.company-project-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+  padding-bottom: 20px;
+  margin-bottom: 5px;
+}
+
+.company-project-header h3 {
+  font-size: 50px;
+  line-height: 48px;
+  margin: 0;
+  font-weight: 600;
+  color: var(--accentColor);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.company-project-title {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.company-project-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #adacac;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.company-project-tools-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accentColor);
+  opacity: 0.9;
+}
+
+.company-project-tools {
+  font-size: 15px;
+  color: #eae5ec;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.company-project-image-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+@media only screen and (max-width: 1200px) {
+  .company-projects-section h2 {
+    font-size: 55px;
+  }
+  .company-project-title {
+    font-size: 22px;
+  }
+  .company-project-card {
+    padding: 35px;
+    gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .company-projects-section {
+    padding: 80px 0;
+  }
+  .company-project-card {
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 30px;
+  }
+  .company-project-header h3 {
+    font-size: 40px;
+    line-height: 38px;
+  }
+}
