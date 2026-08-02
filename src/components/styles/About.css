@@ -1,0 +1,123 @@
+/* Layout Overhaul for split About section */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  width: var(--cWidth);
+  margin: auto;
+  padding: 80px 0;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 50px;
+  align-items: center;
+}
+
+/* Skills Column Styling */
+.about-skills {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.skills-title {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: 400;
+  color: var(--accentColor);
+  margin: 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+.skill-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  background: rgba(0, 255, 213, 0.03);
+  border-color: var(--accentColor);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 255, 213, 0.05);
+}
+
+.skill-icon {
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-name {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #eae5ec;
+}
+
+/* About Me Column Styling */
+.about-me {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about-me h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: 400;
+  color: var(--accentColor);
+  margin: 0;
+}
+
+.about-me p {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+/* Desktop layout styles */
+@media only screen and (min-width: 1025px) {
+  .about-section {
+    width: var(--cWidth);
+    max-width: 1920px;
+    height: var(--vh);
+    padding: 0px;
+  }
+  .about-container {
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+  }
+  .about-me p {
+    font-size: 1.8vw;
+    line-height: 2.3vw;
+  }
+}
+
+@media only screen and (min-width: 1950px) {
+  .about-me p {
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+  }
+}
