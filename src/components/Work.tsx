@@ -136,46 +136,50 @@ const Work = () => {
   useGSAP(() => {
     if (projects.length === 0) return;
 
-    let translateX: number = 0;
+    const mm = gsap.matchMedia();
 
-    function setTranslateX() {
-      const box = document.getElementsByClassName("work-box");
-      if (box.length === 0) return;
-      const rectLeft = document
-        .querySelector(".work-container")!
-        .getBoundingClientRect().left;
-      const rect = box[0].getBoundingClientRect();
-      const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
-      let padding: number =
-        parseInt(window.getComputedStyle(box[0]).padding) / 2;
-      translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
-    }
+    // Desktop Media Query (Width > 1024px): Enable GSAP Pinned Horizontal Scroll
+    mm.add("(min-width: 1025px)", () => {
+      let translateX: number = 0;
 
-    setTranslateX();
+      function setTranslateX() {
+        const box = document.getElementsByClassName("work-box");
+        if (box.length === 0) return;
+        const rectLeft = document
+          .querySelector(".work-container")!
+          .getBoundingClientRect().left;
+        const rect = box[0].getBoundingClientRect();
+        const parentWidth = box[0].parentElement!.getBoundingClientRect().width;
+        let padding: number =
+          parseInt(window.getComputedStyle(box[0]).padding) / 2;
+        translateX = rect.width * box.length - (rectLeft + parentWidth) + padding;
+      }
 
-    let timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".work-section",
-        start: "top top",
-        end: `+=${translateX}`, // Use actual scroll width
-        scrub: true,
-        pin: true,
-        id: "work",
-        invalidateOnRefresh: true,
-      },
+      setTranslateX();
+
+      let timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".work-section",
+          start: "top top",
+          end: `+=${translateX}`, // Use actual scroll width
+          scrub: true,
+          pin: true,
+          id: "work",
+          invalidateOnRefresh: true,
+        },
+      });
+
+      timeline.to(".work-flex", {
+        x: -translateX,
+        ease: "none",
+      });
+
+      ScrollTrigger.refresh();
     });
 
-    timeline.to(".work-flex", {
-      x: -translateX,
-      ease: "none",
-    });
-
-    ScrollTrigger.refresh();
-
-    // Clean up
+    // Clean up media query contexts
     return () => {
-      timeline.kill();
-      ScrollTrigger.getById("work")?.kill();
+      mm.revert();
     };
   }, [projects]);
 
