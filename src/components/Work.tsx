@@ -183,7 +183,7 @@ const Work = () => {
     <div className="work-section" id="work">
       <div className="work-container section-container">
         <h2>
-          My <span>Work</span>
+          Personal <span>Projects</span>
         </h2>
         {loading ? (
           <div className="work-loading" style={{ padding: "100px 0", textAlign: "center", fontSize: "24px" }}>
