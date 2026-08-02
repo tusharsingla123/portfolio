@@ -11,18 +11,18 @@ interface CompanyProject {
 
 const COMPANY_PROJECTS: CompanyProject[] = [
   {
-    id: 1001,
-    name: "samarth-sarathi",
-    formattedName: "Samarth Sarathi — Enterprise GenAI RAG Platform",
-    description: "Architected a GenAI-driven RAG platform to facilitate intelligent retrieval of SOPs and equipment manuals. Devised a scanned document processing pipeline and conversational interface with precise source references.",
-    tools: ["Angular 19", "FastAPI", "Python", "Azure OpenAI", "Azure AI Search", "Azure SQL", "Vector Database", "Power BI", "Docker"]
-  },
-  {
     id: 1002,
     name: "crane-connect",
     formattedName: "Crane Connect — Resource Booking System",
     description: "Built an enterprise crane booking platform enabling teams to request, schedule, and track crane allocations. Implemented real-time calendar scheduling with conflict detection and RESTful admin dashboards.",
     tools: ["React 18", "TypeScript", "FastAPI", "Azure PostgreSQL", "Tailwind CSS", "JWT", "Docker"]
+  },
+  {
+    id: 1001,
+    name: "samarth-sarathi",
+    formattedName: "Samarth Sarathi — Enterprise GenAI RAG Platform",
+    description: "Architected a GenAI-driven RAG platform to facilitate intelligent retrieval of SOPs and equipment manuals. Devised a scanned document processing pipeline and conversational interface with precise source references.",
+    tools: ["Angular 19", "FastAPI", "Python", "Azure OpenAI", "Azure AI Search", "Azure SQL", "Vector Database", "Power BI", "Docker"]
   },
   {
     id: 1003,
