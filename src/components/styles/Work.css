@@ -28,7 +28,7 @@
   position: relative;
 }
 .work-box {
-  padding: 80px;
+  padding: 45px 60px;
   display: flex;
   flex-direction: column;
   width: 600px;
@@ -38,8 +38,8 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   flex-shrink: 0;
-  gap: 50px;
-  justify-content: start;
+  gap: 30px;
+  justify-content: space-between;
   transition: background 0.4s ease, border-color 0.4s ease;
 }
 .work-box:hover {
@@ -139,39 +139,16 @@
 }
 @media only screen and (max-height: 900px) {
   .work-image img {
-    max-height: 200px;
+    max-height: 250px;
   }
   .work-box {
-    padding: 40px 30px;
-    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
   .work-section h2 {
-    font-size: 55px;
-    margin-bottom: 20px;
-    margin-top: 60px;
-  }
-}
-@media only screen and (max-height: 750px) {
-  .work-image img {
-    max-height: 150px;
-  }
-  .work-box {
-    padding: 30px;
-    gap: 20px;
-  }
-  .work-title h3 {
-    font-size: 35px;
-    line-height: 35px;
-  }
-  .work-info h4 {
-    font-size: 15px;
-  }
-  .work-info p {
-    font-size: 13px;
-  }
-  .work-section h2 {
-    font-size: 45px;
-    margin-top: 40px;
+    font-size: 60px;
+    margin-bottom: 30px;
+    margin-top: 70px;
   }
 }
 @media only screen and (max-width: 1400px) {
