@@ -27,7 +27,7 @@ const Career = () => {
               <h3>2025 - NOW</h3>
             </div>
             <p>
-              Lead enterprise software engineering and AI solutions on Microsoft Azure. Design and deploy vector-database RAG platforms, vector search models, cloud infrastructure, enterprise web applications, backend APIs, interactive dashboards, and automated business workflows.
+              Lead enterprise software engineering and AI solutions on Microsoft Azure and Microsoft Fabric. Design and deploy vector-database RAG platforms, vector search models, cloud infrastructure, enterprise web applications, backend APIs, interactive dashboards, and automated business workflows using Power Apps and Power Automate.
             </p>
           </div>
           <div className="career-info-box">
@@ -39,7 +39,7 @@ const Career = () => {
               <h3>2025 - NOW</h3>
             </div>
             <p>
-              Lead enterprise software engineering and AI solutions on Microsoft Azure. Design and deploy vector-database RAG platforms, vector search models, cloud infrastructure, enterprise web applications, backend APIs, interactive dashboards, and automated business workflows.
+              Lead enterprise software engineering and AI solutions on Microsoft Azure and Microsoft Fabric. Design and deploy vector-database RAG platforms, vector search models, cloud infrastructure, enterprise web applications, backend APIs, interactive dashboards, and automated business workflows using Power Apps and Power Automate.
             </p>
           </div>
         </div>
