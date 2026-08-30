@@ -139,16 +139,39 @@
 }
 @media only screen and (max-height: 900px) {
   .work-image img {
-    max-height: 250px;
+    max-height: 200px;
   }
   .work-box {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 30px;
+    gap: 30px;
   }
   .work-section h2 {
-    font-size: 60px;
-    margin-bottom: 30px;
-    margin-top: 70px;
+    font-size: 55px;
+    margin-bottom: 20px;
+    margin-top: 60px;
+  }
+}
+@media only screen and (max-height: 750px) {
+  .work-image img {
+    max-height: 150px;
+  }
+  .work-box {
+    padding: 30px;
+    gap: 20px;
+  }
+  .work-title h3 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .work-info h4 {
+    font-size: 15px;
+  }
+  .work-info p {
+    font-size: 13px;
+  }
+  .work-section h2 {
+    font-size: 45px;
+    margin-top: 40px;
   }
 }
 @media only screen and (max-width: 1400px) {
@@ -276,4 +299,29 @@
     border-radius: 8px;
     object-fit: cover;
   }
+}
+
+/* Tools & Features Neon Mint Badges */
+.work-tools-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  width: 100%;
+}
+.work-tool-badge {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--accentColor);
+  background: rgba(0, 255, 213, 0.05);
+  border: 1px solid rgba(0, 255, 213, 0.15);
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+.work-box:hover .work-tool-badge {
+  background: rgba(0, 255, 213, 0.1);
+  border-color: var(--accentColor);
 }

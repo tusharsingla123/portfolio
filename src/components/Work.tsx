@@ -214,7 +214,11 @@ const Work = () => {
                     </div>
                   </div>
                   <h4>Tools and features</h4>
-                  <p style={{ textTransform: "none" }}>{project.tools.join(", ")}</p>
+                  <div className="work-tools-flex">
+                    {project.tools.map((tool) => (
+                      <span className="work-tool-badge" key={tool}>{tool}</span>
+                    ))}
+                  </div>
                 </div>
                 <WorkImage 
                   image={`https://picsum.photos/seed/${project.id}/600/400`} 

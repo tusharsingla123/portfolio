@@ -58,7 +58,11 @@ const CompanyProjects = () => {
                 <p className="company-project-desc">{project.description}</p>
                 
                 <h5 className="company-project-tools-title">Tools and features</h5>
-                <p className="company-project-tools">{project.tools.join(", ")}</p>
+                <div className="company-project-tools-flex">
+                  {project.tools.map((tool) => (
+                    <span className="company-project-tool-badge" key={tool}>{tool}</span>
+                  ))}
+                </div>
               </div>
               <div className="company-project-image-wrapper">
                 <WorkImage 

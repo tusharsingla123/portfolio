@@ -107,12 +107,30 @@
   opacity: 0.9;
 }
 
-.company-project-tools {
-  font-size: 15px;
-  color: #eae5ec;
-  margin: 0;
+.company-project-tools-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.company-project-tool-badge {
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.4;
+  color: var(--accentColor);
+  background: rgba(0, 255, 213, 0.05);
+  border: 1px solid rgba(0, 255, 213, 0.15);
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.company-project-card:hover .company-project-tool-badge {
+  background: rgba(0, 255, 213, 0.1);
+  border-color: var(--accentColor);
 }
 
 .company-project-image-wrapper {
