@@ -116,13 +116,18 @@ const Work = () => {
             // Description
             const description = custom.description || repo.description || "A clean full-stack application built for production logistics and deployment details.";
 
+            let homepage = repo.homepage;
+            if (repo.name === "Fruit" || repo.name === "FruitBackend") {
+              homepage = null;
+            }
+
             return {
               id: repo.id,
               name: repo.name,
               formattedName,
               description,
               html_url: repo.html_url,
-              homepage: repo.homepage,
+              homepage,
               tools,
             };
           });
