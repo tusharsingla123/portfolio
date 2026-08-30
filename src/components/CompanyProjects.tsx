@@ -11,6 +11,13 @@ interface CompanyProject {
 
 const COMPANY_PROJECTS: CompanyProject[] = [
   {
+    id: 1004,
+    name: "substore-management-system",
+    formattedName: "Substore Management System",
+    description: "Developed an enterprise inventory portal tracking stock allocations across plants. Handles material issuance, multi-level admin approvals, store-to-store transfers, and automated valuation audits.",
+    tools: ["React 19", "TypeScript", "Tailwind CSS", "Radix UI", "FastAPI", "Azure PostgreSQL", "JWT", "Docker"]
+  },
+  {
     id: 1002,
     name: "crane-connect",
     formattedName: "Crane Connect — Resource Booking System",
@@ -30,13 +37,6 @@ const COMPANY_PROJECTS: CompanyProject[] = [
     formattedName: "Vibration Alerting & Predictive Maintenance System",
     description: "Automated extraction of vibration metrics from PDF reports. Applied XGBoost modeling to forecast equipment health categories and enabled real-time alerts through custom dashboards.",
     tools: ["Python", "PostgreSQL", "Power BI", "Machine Learning (XGBoost)", "Data Lakehouse", "PAM Server"]
-  },
-  {
-    id: 1004,
-    name: "substore-management-system",
-    formattedName: "Substore Management System",
-    description: "Developed an enterprise inventory portal tracking stock allocations across plants. Handles material issuance, multi-level admin approvals, store-to-store transfers, and automated valuation audits.",
-    tools: ["React 19", "TypeScript", "Tailwind CSS", "Radix UI", "FastAPI", "Azure PostgreSQL", "JWT", "Docker"]
   }
 ];
 
