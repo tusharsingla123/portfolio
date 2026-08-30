@@ -24,10 +24,10 @@ const Career = () => {
                 <h4>GET - AI & Software Engineer</h4>
                 <h5>Tata Chemicals</h5>
               </div>
-              <h3>2025</h3>
+              <h3>2025 - NOW</h3>
             </div>
             <p>
-              Developed enterprise web applications, designed backend APIs, created interactive dashboards, and automated business workflows.
+              Lead enterprise software engineering and AI solutions on Microsoft Azure. Design and deploy vector-database RAG platforms, vector search models, cloud infrastructure, enterprise web applications, backend APIs, interactive dashboards, and automated business workflows.
             </p>
           </div>
           <div className="career-info-box">
@@ -36,10 +36,10 @@ const Career = () => {
                 <h4>Assistant Manager - AI & Software Engineer</h4>
                 <h5>Tata Chemicals</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2025 - NOW</h3>
             </div>
             <p>
-              Lead enterprise software engineering and AI solutions on Microsoft Azure. Design and deploy vector-database RAG platforms, vector search models, and cloud infrastructure.
+              Lead enterprise software engineering and AI solutions on Microsoft Azure. Design and deploy vector-database RAG platforms, vector search models, cloud infrastructure, enterprise web applications, backend APIs, interactive dashboards, and automated business workflows.
             </p>
           </div>
         </div>
