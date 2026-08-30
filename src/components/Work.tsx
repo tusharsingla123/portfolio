@@ -68,6 +68,11 @@ const CUSTOM_PROJECT_DETAILS: Record<string, CustomRepoDetails> = {
     formattedName: "Secure To-Do List API",
     description: "Backend services with JWT session authorization, credential hashing, and mongo persistence.",
     tools: ["Node.js", "Express.js", "JWT", "MongoDB", "Mongoose"]
+  },
+  "Inventory-Management-System": {
+    formattedName: "Inventory Management System",
+    description: "A complete inventory and stock management system with multi-tenant workspace setups, order trackers, invoice generators, and analytics dashboards.",
+    tools: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Radix UI", "FastAPI", "SQLAlchemy", "PostgreSQL", "JWT", "bcrypt"]
   }
 };
 
