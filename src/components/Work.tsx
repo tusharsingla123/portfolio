@@ -49,16 +49,6 @@ const CUSTOM_PROJECT_DETAILS: Record<string, CustomRepoDetails> = {
     description: "Track spending habits, manage custom categories, compute balance summaries, and analyze inflation forecasts.",
     tools: ["React.js", "Node.js", "Express.js", "MongoDB", "Mongoose"]
   },
-  "Fruit": {
-    formattedName: "Fruit.ai Health Manager",
-    description: "Wellness companion equipped with custom chatbot assistants, multi-lingual translations, product panels, and FAQ managers.",
-    tools: ["React.js", "Python", "FastAPI", "Flask", "googletrans", "Vercel"]
-  },
-  "FruitBackend": {
-    formattedName: "Fruit.ai Backend",
-    description: "Providing high-performance API endpoints for translational queries, health lookups, and FAQ persistence.",
-    tools: ["Python", "FastAPI", "Flask", "REST APIs", "Vercel"]
-  },
   "just-search": {
     formattedName: "Just Search Utility",
     description: "Search interface tool featuring clean search filters and query matching index systems.",
@@ -73,7 +63,33 @@ const CUSTOM_PROJECT_DETAILS: Record<string, CustomRepoDetails> = {
     formattedName: "Inventory Management System",
     description: "A complete inventory and stock management system with multi-tenant workspace setups, order trackers, invoice generators, and analytics dashboards.",
     tools: ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Radix UI", "FastAPI", "SQLAlchemy", "PostgreSQL", "JWT", "bcrypt"]
+  },
+  "LegalDoc-RAG_Document_Chatbot_and_Comparison_Engine": {
+    formattedName: "LegalDoc — RAG Document Chatbot & Comparison Engine",
+    description: "AI-powered legal document analysis platform supporting RAG-based document querying, semantic search, and multi-document comparison.",
+    tools: ["React 18", "TypeScript", "Vite", "TanStack Router", "Tailwind CSS", "FastAPI", "Uvicorn", "PostgreSQL", "pgvector", "PyJWT", "bcrypt", "OpenAI / Azure OpenAI", "PyMuPDF"]
+  },
+  "RAG_Document_Chatbot_and_Comparison_Engine": {
+    formattedName: "LegalDoc — RAG Document Chatbot & Comparison Engine",
+    description: "AI-powered legal document analysis platform supporting RAG-based document querying, semantic search, and multi-document comparison.",
+    tools: ["React 18", "TypeScript", "Vite", "TanStack Router", "Tailwind CSS", "FastAPI", "Uvicorn", "PostgreSQL", "pgvector", "PyJWT", "bcrypt", "OpenAI / Azure OpenAI", "PyMuPDF"]
+  },
+  "LegalDoc": {
+    formattedName: "LegalDoc — RAG Document Chatbot & Comparison Engine",
+    description: "AI-powered legal document analysis platform supporting RAG-based document querying, semantic search, and multi-document comparison.",
+    tools: ["React 18", "TypeScript", "Vite", "TanStack Router", "Tailwind CSS", "FastAPI", "Uvicorn", "PostgreSQL", "pgvector", "PyJWT", "bcrypt", "OpenAI / Azure OpenAI", "PyMuPDF"]
   }
+};
+
+const getCustomDetails = (repoName: string): CustomRepoDetails | undefined => {
+  if (CUSTOM_PROJECT_DETAILS[repoName]) return CUSTOM_PROJECT_DETAILS[repoName];
+  const keys = Object.keys(CUSTOM_PROJECT_DETAILS);
+  const normalizedRepo = repoName.toLowerCase().replace(/[-_]/g, "");
+  const foundKey = keys.find((key) => {
+    const normalizedKey = key.toLowerCase().replace(/[-_]/g, "");
+    return normalizedRepo === normalizedKey || normalizedRepo.includes(normalizedKey) || normalizedKey.includes(normalizedRepo);
+  });
+  return foundKey ? CUSTOM_PROJECT_DETAILS[foundKey] : undefined;
 };
 
 const Work = () => {
@@ -93,9 +109,16 @@ const Work = () => {
 
         // Filter and format the repositories
         const filtered: Project[] = data
-          .filter((repo: any) => !repo.fork && repo.name !== "tusharsingla123" && repo.name !== "portfolio")
+          .filter(
+            (repo: any) =>
+              !repo.fork &&
+              repo.name !== "tusharsingla123" &&
+              repo.name !== "portfolio" &&
+              repo.name !== "Fruit" &&
+              repo.name !== "FruitBackend"
+          )
           .map((repo: any) => {
-            const custom = CUSTOM_PROJECT_DETAILS[repo.name] || {};
+            const custom = getCustomDetails(repo.name) || {};
 
             // Custom formatting or generic title parsing
             const formattedName = custom.formattedName || repo.name
@@ -117,9 +140,6 @@ const Work = () => {
             const description = custom.description || repo.description || "A clean full-stack application built for production logistics and deployment details.";
 
             let homepage = repo.homepage;
-            if (repo.name === "Fruit" || repo.name === "FruitBackend") {
-              homepage = null;
-            }
 
             return {
               id: repo.id,
